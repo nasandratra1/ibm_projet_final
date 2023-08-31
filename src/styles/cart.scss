@@ -1,4 +1,5 @@
 @import "colors";
+
 .cart {
   background-color: $pink;
   width: 100%;
@@ -7,12 +8,13 @@
   > main {
     height: 100%;
     background-color: white;
-    max-width: 900px;
+    max-width: 1400px;
     margin: auto;
     padding: 2rem;
 
     > article {
       padding: 2rem;
+      
       > div {
         display: flex;
         justify-content: space-between;
@@ -20,14 +22,20 @@
       }
 
       > a {
+        display:block;
+        width: 120px;
+        height: 50px;
+        font-weight: lighter;
         background-color: $red;
         color: white;
         padding: 0.5rem 1rem;
         border-radius: 5px;
         text-align: center;
-        margin-top: 2rem;
-        float: right;
-      }
+        font-size: 18px;
+        line-height: 20px;         
+        margin : 0 90% 0 10%; 
+        margin-bottom: 0.5cm;
+        }
     }
   }
 }
@@ -63,12 +71,12 @@
       margin: 0.25rem;
       outline: none;
       border-radius: 5px;
-      color: $red;
+      color: $dark;
 
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
         -webkit-appearance: none;
-        margin: 0%;
+        margin: 0;
       }
     }
 
@@ -78,15 +86,15 @@
       padding: 0.5rem;
       background-color: $dark;
       color: white;
-      border-radius: 5px;
+      border-radius: 5px; 
     }
   }
 }
 
 @media screen and (max-width: 600px) {
   .cart > main > article > a {
-    float: none;
     display: block;
     width: 100%;
-  }
+    margin-top: 5rem; 
+}
 }

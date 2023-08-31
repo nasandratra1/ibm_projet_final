@@ -4,6 +4,15 @@ import { AiOutlineEye } from "react-icons/ai";
 
 const MyOrders = () => {
   const arr = [1, 2, 3, 4];
+  const orders = [
+    {
+      orderId: "sdkfsdfdsf",
+      status: "En cours de traitement",
+      itemQty: 23,
+      amount: 2132,
+      paymentMethod: "CB",
+    },
+  ];
 
   return (
     <section className="tableClass">
@@ -21,8 +30,21 @@ const MyOrders = () => {
           </thead>
 
           <tbody>
-//     Add the code for the table body
-           
+          {orders.map((order) => (
+              <tr key={order.orderId}>
+                <td>#{order.orderId}</td>
+                <td>{order.status}</td>
+                <td>{order.itemQty}</td>
+                <td>${order.amount}</td>
+                <td>{order.paymentMethod}</td>
+                <td>
+                <Link to={`/order/${order.orderId}`}>
+                    <AiOutlineEye />
+                  </Link>
+                </td>
+              </tr>
+            ))}
+
           </tbody>
         </table>
       </main>

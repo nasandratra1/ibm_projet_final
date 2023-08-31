@@ -16,15 +16,16 @@ function DropdownMenu() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
         <div className="container">
           <a className="navbar-brand" href="#">
           
           </a>
-          <div class="btn-group">
-            <button
+          <div class="btn">
+          <button
               type="button"
-              class="btn btn-primary dropdown-toggle"
+              class="btn btn-secondary
+               dropdown-toggle"
               data-bs-toggle="dropdown"
               data-bs-display="static"
               aria-expanded="false"
